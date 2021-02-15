@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <div class="card d-flex flex-row">
+        <%= image_tag @flat['imageUrl'], width: '300' %>
+        <div class="p-3">
+            <h5><%= @flat['name'] %></h5>
+            <p class="pt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et magnam obcaecati, deserunt
+                sequi quaerat molestias unde voluptatum perspiciatis numquam accusamus, quasi omnis, adipisci sunt enim?
+                Possimus voluptates deserunt architecto nesciunt!</p>
+            <h5 class="text-end"><%= @flat['price'] %> €</h5>
+        </div>
+    </div>
+    <%= link_to 'go back home', flats_path, class: 'btn btn-primary mt-2' %>
+</div>

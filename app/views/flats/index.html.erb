@@ -1,0 +1,18 @@
+<h4 class="text-center">Index of the flats</h4>
+
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="col-5 p-0 card m-3">
+      <%= image_tag flat['imageUrl'], width: "100%" %>
+      <div class="px-3 pt-4">
+        <h6><%= link_to flat['name'], flat_path(flat["id"]), class: 'title mt-3' %> </h6>
+        <div class="d-flex justify-content-between align-items-end">
+          <p class="rf">rf:<%= flat['id'] %></p>
+          <p><%= flat['price'] %> €</p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
